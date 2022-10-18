@@ -23,7 +23,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     #Users
-    path('user/', include('login.routers')),
+    path('usuarios/', include('login.routers')),
     # swagger
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 

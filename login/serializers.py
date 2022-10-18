@@ -8,16 +8,16 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['password', 'username', 'name', 'last_name','is_active']
         
-    def to_representation(self, instance):
+    # def to_representation(self, instance):
        
-        return {
-            'contraseña': instance.password,
-            'correo_electronico': instance.username,
-            'nombre': instance.name,
-            'apellido': instance.last_name,
-            'estado': instance.is_active,
+    #     return {
+    #         'contraseña': instance.password,
+    #         'correo_electronico': instance.username,
+    #         'nombre': instance.name,
+    #         'apellido': instance.last_name,
+    #         'estado': instance.is_active,
 
-        }
+    #     }
     def create(self,validated_data):
        create_user = User(**validated_data)
        create_user.set_password(validated_data['password'])
