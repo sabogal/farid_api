@@ -6,7 +6,7 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['password', 'username', 'name', 'last_name','is_active']
+        fields = ['id','password', 'username', 'name', 'last_name','is_active']
         
     # def to_representation(self, instance):
        
